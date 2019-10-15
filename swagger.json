@@ -1,0 +1,96 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Url Shortner",
+      "description": "Shortens long urls"
+    },
+    "host": "localhost:5000",
+    "basePath": "/api/v1",
+    "tags": [
+      {
+        "name": "Url",
+        "description": "API for urls in the system"
+      }
+    ],
+    "schemes": [
+      "http"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/api/shorten": {
+        "post": {
+          "tags": [
+            "Url"
+          ],
+          "description": "shorten url",
+          "parameters": [
+            {
+              "name": "url",
+              "in": "body",
+              "description": "url that we want to shorten",
+              "schema": {
+                "$ref": "#/definitions/urlShort"
+              }
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "response was succesful",
+              "schema": {
+                "$ref": "#/definitions/Url"
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "Url": {
+        "required": [
+          "url"
+        ],
+        "properties": {
+          "_id": {
+            "type": "string",
+            "uniqueItems": true
+          },
+          "urlCode": {
+            "type": "string",
+            "uniqueItems": true
+          },
+          "longUrl": {
+            "type": "string"
+          },
+          "shortUrl": {
+            "type": "string"
+          },
+          "clicks": {
+            "type": "integer"
+          }
+        }
+      },
+      "urlShort":{
+        "required": [
+          "url"
+        ],
+        "properties": {
+          "longUrl": {
+            "type": "string"
+          }
+        }
+      },
+      "Urls": {
+        "type": "object",
+        "$ref": "#/definitions/Url"
+      }
+    }
+  }
