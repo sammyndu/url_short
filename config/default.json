@@ -1,4 +1,4 @@
 {
     "mongoURI": "mongodb+srv://sam:60winner@cluster0-oa2et.mongodb.net/url?retryWrites=true&w=majority",
-    "baseURL": "http://localhost:5000"
+    "baseURL": "https://sam-url-short.herokuapp.com"
 }
