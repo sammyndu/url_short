@@ -7,7 +7,7 @@ const router = express.Router();
 
 connectdb();
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-app.use('/api/v1', router);
+// app.use('/api/v1', router);
 app.use(express.json({extended: false}));
 
 app.use('/', require('./routes/index'));
