@@ -23,7 +23,7 @@
       "application/json"
     ],
     "paths": {
-      "/api/shorten": {
+      "/api/url/shorten": {
         "post": {
           "tags": [
             "Url"
