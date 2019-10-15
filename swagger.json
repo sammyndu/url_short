@@ -5,8 +5,8 @@
       "title": "Url Shortner",
       "description": "Shortens long urls"
     },
-    "host": "localhost:5000",
-    "basePath": "/api/v1",
+    "host": "sam-url-short.herokuapp.com",
+    "basePath": "/",
     "tags": [
       {
         "name": "Url",
